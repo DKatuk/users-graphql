@@ -7,12 +7,18 @@ GraphiQL is an in-browser tool for writing, validating, and
 testing GraphQL queries.
 
 
-1. Run in your terminal
+1. Run in your terminal start express server
 ``` bash
-node server.js
+npm run dev
 ```
 2. Visit localhost:4000
-3. query in GraphiQL
+
+3. Run in your terminal to start json server
+``` bash
+npm run json:server
+```
+
+4. query examples in GraphiQL
 
 ```
 query {
@@ -22,4 +28,18 @@ query {
     age
   }
 }
+```
+
+```
+query {
+  user(id: "23"){
+    id,
+    firstName,
+    age,
+    company {
+      name
+    }
+  }
+}
+
 ```
