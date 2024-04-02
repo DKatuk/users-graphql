@@ -43,3 +43,25 @@ query {
 }
 
 ```
+
+Bidirectional relation
+```
+query {
+  user(id: "23"){
+    id,
+    firstName,
+    age,
+    company {
+      name
+    }
+  },
+  company(id: "1"){
+    name
+    users {
+      id
+      firstName
+    }
+  }
+}
+
+```
